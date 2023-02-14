@@ -1,0 +1,2 @@
+# vital
+app-nativescript
