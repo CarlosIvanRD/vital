@@ -1,7 +1,23 @@
+<ScrollView>
 <ActionBar>
   <Label text="Home"></Label>
 </ActionBar>
-
-<GridLayout>
-  <!-- Add your page content here -->
-</GridLayout>
+<StackLayout>
+<Image class="logo" src="res://componente" stretch="aspectFit" verticalAlignment="center" horizontalAlignment="center"></Image>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd">
+  <StackLayout>
+    <StackLayout orientation="horizontal" class="textfield-container">
+      <Image  class="in" src="res://union" stretch="logo" verticalAlignment="center"  class="loo"></Image>
+      <TextField class="txtlab" hint="Email" keyboardType="email"></TextField>
+    </StackLayout>
+    <StackLayout orientation="horizontal" class="textfield-container">
+      <Image  class="in" src="res://candado" stretch="logo" verticalAlignment="center"  class="loo"></Image>
+      <TextField class="txtlab" hint="Contraseña" secure="true"></TextField>
+    </StackLayout>
+    <Button class="boton bt1" text="Iniciar sesión" tap="onLoginTap" ></Button>
+  </StackLayout>
+</Page>
+<Label text="¿Aún no tienes cuenta?" class="txt" horizontalAlignment="center"></Label>
+<label [nsRouterLink]="['/register']" text="Regístrate aquí" class="txt registerHere" horizontalAlignment="center"></label>
+</StackLayout>
+</ScrollView>

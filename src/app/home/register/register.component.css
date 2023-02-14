@@ -1,0 +1,48 @@
+@import '@nativescript/theme/css/core.css';
+@import '@nativescript/theme/css/default.css';
+
+/* Place any CSS rules you want to apply on both iOS and Android here.
+This is where the vast majority of your CSS code goes. */
+.logo{
+    margin-top: -160;
+    margin-bottom: 10;
+}
+.boton{
+    border-radius: 50;
+    width: 80%;
+    height: 60;
+    font-weight: bold;
+    font-size: 18;
+    margin-bottom: 30;
+    
+}
+.bt1{
+    color: #FFFFFF;
+    background-color: #5C8313;
+    margin-top: 30;
+}
+TextField{
+    height: 40;
+    color: #707070 ;
+    margin-top: 20;
+    width: 75%;
+    border-width: 1;
+    border-color: #707070;
+    border-radius: 50;
+    padding: 5;
+}
+.txtlab{
+    font-size: 24;
+    color: #707070;
+}
+.txt{
+    font-size: 24;
+    color: black;
+}
+.registerHere{
+    color: #5c8313;
+}
+.loo{
+    margin-left: 35;
+    margin-top: 25;
+}

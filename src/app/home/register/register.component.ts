@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core'
 import { Page } from '@nativescript/core';
 
 @Component({
-  selector: 'Home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
-})
-export class HomeComponent implements OnInit {
+  selector: 'Register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css'],
+})  
+export class RegisterComponent implements OnInit {
+
+  var1 = 1
   constructor(private page:Page) {
     // Use the component constructor to inject providers.
   }
@@ -15,8 +17,7 @@ export class HomeComponent implements OnInit {
     this.page.actionBarHidden = true;
     // Init your component properties here.
   }
-
-  prueba() {
-    alert()
+  cambiarvar1() {
+    this.var1 = 2;
   }
 }

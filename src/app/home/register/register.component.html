@@ -1,0 +1,46 @@
+<ScrollView>
+    <StackLayout>
+    <Image class="logo" src="res://componente" stretch="aspectFit" verticalAlignment="center" horizontalAlignment="center"></Image>
+    <Page xmlns="http://schemas.nativescript.org/tns.xsd">
+      <StackLayout>
+        <StackLayout horizontalAlignment="center" orientation="horizontal" class="textfield-container">
+          <TextField class="txtlab" hint="Email" keyboardType="email"></TextField>
+        </StackLayout>
+        <StackLayout horizontalAlignment="center" orientation="horizontal" class="textfield-container">
+          <TextField class="txtlab" hint="Contraseña" secure="true"></TextField>
+        </StackLayout>
+        <StackLayout horizontalAlignment="center" orientation="horizontal" class="textfield-container">
+            <TextField class="txtlab" hint="Confirmar contraseña" secure="true"></TextField>
+          </StackLayout>
+          <Label text="Datos médicos importantes" class="txt registerHere" horizontalAlignment="center"></Label>
+          <GridLayout rows="*,*,*" columns="*,*,*" horizontalAlignment="center">
+            <StackLayout row="0" col="0"  horizontalAlignment="center" verticalAlignment="center">
+              <Image class="in" (tap)="cambiarvar1()" [src]="var1 === 1? 'res://union': 'res://unionoscuro'" stretch="logo" verticalAlignment="center" horizontalAlignment="center" class="loo"></Image>
+              <Label text="texto" verticalAlignment="center" horizontalAlignment="center"></Label>
+            </StackLayout>
+            <StackLayout row="0" col="1"  horizontalAlignment="center" verticalAlignment="center">
+              <Image class="in" (tap)="cambiarvar1()" [src]="var1 === 1? 'res://union': 'res://unionoscuro'" stretch="logo" verticalAlignment="center" horizontalAlignment="center" class="loo"></Image>
+              <Label text="texto" verticalAlignment="center" horizontalAlignment="center"></Label>
+            </StackLayout>
+            <StackLayout row="0" col="2"  horizontalAlignment="center" verticalAlignment="center">
+              <Image class="in" (tap)="cambiarvar1()" [src]="var1 === 1? 'res://union': 'res://unionoscuro'" stretch="logo" verticalAlignment="center" horizontalAlignment="center" class="loo"></Image>
+              <Label text="texto" verticalAlignment="center" horizontalAlignment="center"></Label>
+            </StackLayout>
+            <StackLayout row="1" col="0"  horizontalAlignment="center" verticalAlignment="center">
+              <Image class="in" (tap)="cambiarvar1()" [src]="var1 === 1? 'res://union': 'res://unionoscuro'" stretch="logo" verticalAlignment="center" horizontalAlignment="center" class="loo"></Image>
+              <Label text="texto" verticalAlignment="center" horizontalAlignment="center"></Label>
+            </StackLayout>
+            <StackLayout row="1" col="1"  horizontalAlignment="center" verticalAlignment="center">
+              <Image class="in" (tap)="cambiarvar1()" [src]="var1 === 1? 'res://union': 'res://unionoscuro'" stretch="logo" verticalAlignment="center" horizontalAlignment="center" class="loo"></Image>
+              <Label text="texto" verticalAlignment="center" horizontalAlignment="center"></Label>
+            </StackLayout>
+            <StackLayout row="1" col="2"  horizontalAlignment="center" verticalAlignment="center">
+              <Image class="in" (tap)="cambiarvar1()" [src]="var1 === 1? 'res://union': 'res://unionoscuro'" stretch="logo" verticalAlignment="center" horizontalAlignment="center" class="loo"></Image>
+              <Label text="texto" verticalAlignment="center" horizontalAlignment="center"></Label>
+            </StackLayout>
+          </GridLayout>
+        <Button class="boton bt1" text="Siguiente" tap="onLoginTap" ></Button>
+      </StackLayout>
+    </Page>
+    </StackLayout>
+    </ScrollView>
