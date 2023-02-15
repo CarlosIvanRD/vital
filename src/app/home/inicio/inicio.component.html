@@ -4,9 +4,14 @@
         <Button class="boton bt1" text="Publicar" tap="onLoginTap"></Button>
         <TextField class="search-field" hint="Buscar"></TextField>
       </StackLayout>
+      <StackLayout *ngIf="img === 2" orientation="horizontal" horizontalAlignment="center" style="margin-top: 10; margin-bottom: 10;">
+        <Button (tap)="changeColor1()" [ngClass]="!btn1? 'filter b':'filter'" class="filter" text="Desayuno"></Button>
+        <Button (tap)="changeColor2()" [ngClass]="!btn2? 'filter b':'filter'" class="filter" text="Almuerzo"></Button>
+        <Button (tap)="changeColor3()" [ngClass]="!btn3? 'filter b':'filter'" class="filter" text="Cena"></Button>
+      </StackLayout>
         <AbsoluteLayout>
-            <label backgroundColor="#000000"></label>
-            <Image  src="res://fondo2" top="25" left="6" stretch="aspectFill" width="400" verticalAlignment="center"  class="loo"></Image>
+            <Image *ngIf="img === 1" (tap)="changeImg()" src="res://fondo2" top="5" left="0" stretch="aspectFit" width="400" verticalAlignment="center"  class="loo"></Image>
+            <Image *ngIf="img === 2" (tap)="changeImg()" src="res://cocina" top="0" left="0" stretch="aspectFit" width="400" verticalAlignment="center"  class="loo"></Image>
         </AbsoluteLayout>
     </StackLayout>
 

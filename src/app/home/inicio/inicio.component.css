@@ -13,7 +13,7 @@
     margin-right: 10; /* añade un poco de separación entre el botón y el TextField */
     margin-top: 20;
   }
-  
+
   .search-field {
     font-size: 18;
     font-weight: bold;
@@ -30,4 +30,18 @@
 
 .rectangulo{
     border-top: 100000000000000;
+}
+.filter{
+  border-radius: 50;
+  background-color: #9FC754;
+  color: #ffffff;
+  height: 30;
+  font-size: 8;
+  margin-left: 10;
+}
+.b{
+  background-color: #5C8313!important;
+}
+.loo{
+  margin: 0 5;
 }
