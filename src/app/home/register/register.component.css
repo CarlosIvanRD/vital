@@ -7,6 +7,10 @@ This is where the vast majority of your CSS code goes. */
     margin-top: -160;
     margin-bottom: 15;
 }
+.logo2{
+    margin-top: -60;
+    margin-bottom: 15;
+}
 .boton{
     border-radius: 50;
     width: 65%;

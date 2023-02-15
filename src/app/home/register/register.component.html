@@ -1,46 +1,473 @@
 <ScrollView>
-    <StackLayout>
-    <Image class="logo" src="res://componente" stretch="aspectFit" verticalAlignment="center" horizontalAlignment="center"></Image>
+  <StackLayout>
+    <Image
+      [ngClass]="view === 1 ? 'logo' : 'logo2'"
+      src="res://componente"
+      stretch="aspectFit"
+      verticalAlignment="center"
+      horizontalAlignment="center"
+    ></Image>
     <Page xmlns="http://schemas.nativescript.org/tns.xsd">
       <StackLayout>
-        <StackLayout horizontalAlignment="center" orientation="horizontal" class="textfield-container">
-          <TextField class="txtlab" hint="Email" keyboardType="email"></TextField>
-        </StackLayout>
-        <StackLayout horizontalAlignment="center" orientation="horizontal" class="textfield-container">
-          <TextField class="txtlab" hint="Contraseña" secure="true"></TextField>
-        </StackLayout>
-        <StackLayout horizontalAlignment="center" orientation="horizontal" class="textfield-container">
-            <TextField class="txtlab" hint="Confirmar contraseña" secure="true"></TextField>
+        <StackLayout *ngIf="view === 1">
+          <StackLayout
+            horizontalAlignment="center"
+            orientation="horizontal"
+            class="textfield-container"
+          >
+            <TextField
+              class="txtlab"
+              hint="Email"
+              keyboardType="email"
+            ></TextField>
           </StackLayout>
-          <Label text="Datos médicos importantes" class="txt registerHere" horizontalAlignment="center"></Label>
-          <GridLayout rows="*,*,*" columns="*,*,*" horizontalAlignment="center" class="grid">
-            <StackLayout row="0" col="0"  horizontalAlignment="center" verticalAlignment="center">
-              <Image (tap)="changeColor1()" [src]="img1 === 1? 'res://cross': 'res://cross2'" stretch="aspectFit" verticalAlignment="center" horizontalAlignment="center" class="loo"></Image>
-              <Label class="legend" text="Ninguno" verticalAlignment="center" horizontalAlignment="center"></Label>
+          <StackLayout
+            horizontalAlignment="center"
+            orientation="horizontal"
+            class="textfield-container"
+          >
+            <TextField
+              class="txtlab"
+              hint="Contraseña"
+              secure="true"
+            ></TextField>
+          </StackLayout>
+          <StackLayout
+            horizontalAlignment="center"
+            orientation="horizontal"
+            class="textfield-container"
+          >
+            <TextField
+              class="txtlab"
+              hint="Confirmar contraseña"
+              secure="true"
+            ></TextField>
+          </StackLayout>
+          <Label
+            text="Datos médicos importantes"
+            class="txt registerHere"
+            horizontalAlignment="center"
+          ></Label>
+          <GridLayout
+            rows="*,*,*"
+            columns="*,*,*"
+            horizontalAlignment="center"
+            class="grid"
+          >
+            <StackLayout
+              row="0"
+              col="0"
+              horizontalAlignment="center"
+              verticalAlignment="center"
+            >
+              <Image
+                (tap)="changeColor1()"
+                [src]="img1 === 1 ? 'res://cross' : 'res://cross2'"
+                stretch="aspectFit"
+                verticalAlignment="center"
+                horizontalAlignment="center"
+                class="loo"
+              ></Image>
+              <Label
+                class="legend"
+                text="Ninguno"
+                verticalAlignment="center"
+                horizontalAlignment="center"
+              ></Label>
             </StackLayout>
-            <StackLayout row="0" col="1"  horizontalAlignment="center" verticalAlignment="center">
-              <Image (tap)="changeColor2()" [src]="img2 === 1? 'res://milk': 'res://milk2'" stretch="aspectFit" verticalAlignment="center" horizontalAlignment="center" class="loo"></Image>
-              <Label class="legend" text="Diabetes" verticalAlignment="center" horizontalAlignment="center"></Label>
+            <StackLayout
+              row="0"
+              col="1"
+              horizontalAlignment="center"
+              verticalAlignment="center"
+            >
+              <Image
+                (tap)="changeColor2()"
+                [src]="img2 === 1 ? 'res://hand' : 'res://hand2'"
+                stretch="aspectFit"
+                verticalAlignment="center"
+                horizontalAlignment="center"
+                class="loo"
+              ></Image>
+              <Label
+                class="legend"
+                text="Diabetes"
+                verticalAlignment="center"
+                horizontalAlignment="center"
+              ></Label>
             </StackLayout>
-            <StackLayout row="0" col="2"  horizontalAlignment="center" verticalAlignment="center">
-              <Image (tap)="changeColor3()" [src]="img3 === 1? 'res://peanut': 'res://peanut2'" stretch="aspectFit" verticalAlignment="center" horizontalAlignment="center" class="loo"></Image>
-              <Label class="legend" text="Tensión" verticalAlignment="center" horizontalAlignment="center"></Label>
+            <StackLayout
+              row="0"
+              col="2"
+              horizontalAlignment="center"
+              verticalAlignment="center"
+            >
+              <Image
+                (tap)="changeColor3()"
+                [src]="img3 === 1 ? 'res://brain' : 'res://brain2'"
+                stretch="aspectFit"
+                verticalAlignment="center"
+                horizontalAlignment="center"
+                class="loo"
+              ></Image>
+              <Label
+                class="legend"
+                text="Tensión"
+                verticalAlignment="center"
+                horizontalAlignment="center"
+              ></Label>
             </StackLayout>
-            <StackLayout row="1" col="0"  horizontalAlignment="center" verticalAlignment="center">
-              <Image (tap)="changeColor4()" [src]="img4 === 1? 'res://pos': 'res://pos2'" stretch="aspectFit" verticalAlignment="center" horizontalAlignment="center" class="loo"></Image>
-              <Label class="legend" text="Ácido úrico" verticalAlignment="center" horizontalAlignment="center"></Label>
+            <StackLayout
+              row="1"
+              col="0"
+              horizontalAlignment="center"
+              verticalAlignment="center"
+            >
+              <Image
+                (tap)="changeColor4()"
+                [src]="img4 === 1 ? 'res://foot' : 'res://foot2'"
+                stretch="aspectFit"
+                verticalAlignment="center"
+                horizontalAlignment="center"
+                class="loo"
+              ></Image>
+              <Label
+                class="legend"
+                text="Ácido úrico"
+                verticalAlignment="center"
+                horizontalAlignment="center"
+              ></Label>
             </StackLayout>
-            <StackLayout row="1" col="1"  horizontalAlignment="center" verticalAlignment="center">
-              <Image (tap)="changeColor5()" [src]="img5 === 1? 'res://eggs': 'res://eggs2'" stretch="aspectFit" verticalAlignment="center" horizontalAlignment="center" class="loo"></Image>
-              <Label class="legend" text="Corazón" verticalAlignment="center" horizontalAlignment="center"></Label>
+            <StackLayout
+              row="1"
+              col="1"
+              horizontalAlignment="center"
+              verticalAlignment="center"
+            >
+              <Image
+                (tap)="changeColor5()"
+                [src]="img5 === 1 ? 'res://heart' : 'res://heart2'"
+                stretch="aspectFit"
+                verticalAlignment="center"
+                horizontalAlignment="center"
+                class="loo"
+              ></Image>
+              <Label
+                class="legend"
+                text="Corazón"
+                verticalAlignment="center"
+                horizontalAlignment="center"
+              ></Label>
             </StackLayout>
-            <StackLayout row="1" col="2"  horizontalAlignment="center" verticalAlignment="center">
-              <Image (tap)="changeColor6()" [src]="img6 === 1? 'res://potato': 'res://potato2'" stretch="aspectFit" verticalAlignment="center" horizontalAlignment="center" class="loo"></Image>
-              <Label class="legend" text="Otros" verticalAlignment="center" horizontalAlignment="center"></Label>
+            <StackLayout
+              row="1"
+              col="2"
+              horizontalAlignment="center"
+              verticalAlignment="center"
+            >
+              <Image
+                (tap)="changeColor6()"
+                [src]="img6 === 1 ? 'res://dots' : 'res://dots2'"
+                stretch="aspectFit"
+                verticalAlignment="center"
+                horizontalAlignment="center"
+                class="loo"
+              ></Image>
+              <Label
+                class="legend"
+                text="Otros"
+                verticalAlignment="center"
+                horizontalAlignment="center"
+              ></Label>
             </StackLayout>
           </GridLayout>
-        <Button class="boton bt1" text="Siguiente" tap="onLoginTap" ></Button>
+        </StackLayout>
+        <StackLayout *ngIf="view === 2">
+          <Label
+            text="¿Eres alérgico o intolerante a algo?"
+            class="txt registerHere"
+            horizontalAlignment="center"
+          ></Label>
+          <GridLayout
+            rows="*,*,*"
+            columns="*,*,*"
+            horizontalAlignment="center"
+            class="grid"
+          >
+            <StackLayout
+              row="0"
+              col="0"
+              horizontalAlignment="center"
+              verticalAlignment="center"
+            >
+              <Image
+                (tap)="changeColor1()"
+                [src]="img1 === 1 ? 'res://cross' : 'res://cross2'"
+                stretch="aspectFit"
+                verticalAlignment="center"
+                horizontalAlignment="center"
+                class="loo"
+              ></Image>
+              <Label
+                class="legend"
+                text="Ninguno"
+                verticalAlignment="center"
+                horizontalAlignment="center"
+              ></Label>
+            </StackLayout>
+            <StackLayout
+              row="0"
+              col="1"
+              horizontalAlignment="center"
+              verticalAlignment="center"
+            >
+              <Image
+                (tap)="changeColor2()"
+                [src]="img2 === 1 ? 'res://milk' : 'res://milk2'"
+                stretch="aspectFit"
+                verticalAlignment="center"
+                horizontalAlignment="center"
+                class="loo"
+              ></Image>
+              <Label
+                class="legend"
+                text="Leche"
+                verticalAlignment="center"
+                horizontalAlignment="center"
+              ></Label>
+            </StackLayout>
+            <StackLayout
+              row="0"
+              col="2"
+              horizontalAlignment="center"
+              verticalAlignment="center"
+            >
+              <Image
+                (tap)="changeColor3()"
+                [src]="img3 === 1 ? 'res://peanut' : 'res://peanut2'"
+                stretch="aspectFit"
+                verticalAlignment="center"
+                horizontalAlignment="center"
+                class="loo"
+              ></Image>
+              <Label
+                class="legend"
+                text="Maní"
+                verticalAlignment="center"
+                horizontalAlignment="center"
+              ></Label>
+            </StackLayout>
+            <StackLayout
+              row="1"
+              col="0"
+              horizontalAlignment="center"
+              verticalAlignment="center"
+            >
+              <Image
+                (tap)="changeColor4()"
+                [src]="img4 === 1 ? 'res://eggs' : 'res://eggs2'"
+                stretch="aspectFit"
+                verticalAlignment="center"
+                horizontalAlignment="center"
+                class="loo"
+              ></Image>
+              <Label
+                class="legend"
+                text="Huevos"
+                verticalAlignment="center"
+                horizontalAlignment="center"
+              ></Label>
+            </StackLayout>
+            <StackLayout
+              row="1"
+              col="1"
+              horizontalAlignment="center"
+              verticalAlignment="center"
+            >
+              <Image
+                (tap)="changeColor5()"
+                [src]="img5 === 1 ? 'res://potato' : 'res://potato2'"
+                stretch="aspectFit"
+                verticalAlignment="center"
+                horizontalAlignment="center"
+                class="loo"
+              ></Image>
+              <Label
+                class="legend"
+                text="Soja"
+                verticalAlignment="center"
+                horizontalAlignment="center"
+              ></Label>
+            </StackLayout>
+            <StackLayout
+              row="1"
+              col="2"
+              horizontalAlignment="center"
+              verticalAlignment="center"
+            >
+              <Image
+                (tap)="changeColor6()"
+                [src]="img6 === 1 ? 'res://dots' : 'res://dots2'"
+                stretch="aspectFit"
+                verticalAlignment="center"
+                horizontalAlignment="center"
+                class="loo"
+              ></Image>
+              <Label
+                class="legend"
+                text="Otros"
+                verticalAlignment="center"
+                horizontalAlignment="center"
+              ></Label>
+            </StackLayout>
+          </GridLayout>
+        </StackLayout>
+        <StackLayout *ngIf="view === 3">
+          <Label
+            text="Temas de mayor interés"
+            class="txt registerHere"
+            horizontalAlignment="center"
+          ></Label>
+          <GridLayout
+            rows="*,*,*"
+            columns="*,*,*"
+            horizontalAlignment="center"
+            class="grid"
+          >
+            <StackLayout
+              row="0"
+              col="0"
+              horizontalAlignment="center"
+              verticalAlignment="center"
+            >
+              <Image
+                (tap)="changeColor1()"
+                [src]="img1 === 1 ? 'res://cross' : 'res://cross2'"
+                stretch="aspectFit"
+                verticalAlignment="center"
+                horizontalAlignment="center"
+                class="loo"
+              ></Image>
+              <Label
+                class="legend"
+                text="Recetas"
+                verticalAlignment="center"
+                horizontalAlignment="center"
+              ></Label>
+            </StackLayout>
+            <StackLayout
+              row="0"
+              col="1"
+              horizontalAlignment="center"
+              verticalAlignment="center"
+            >
+              <Image
+                (tap)="changeColor2()"
+                [src]="img2 === 1 ? 'res://pet1' : 'res://pet2'"
+                stretch="aspectFit"
+                verticalAlignment="center"
+                horizontalAlignment="center"
+                class="loo"
+              ></Image>
+              <Label
+                class="legend"
+                text="Animales"
+                verticalAlignment="center"
+                horizontalAlignment="center"
+              ></Label>
+            </StackLayout>
+            <StackLayout
+              row="0"
+              col="2"
+              horizontalAlignment="center"
+              verticalAlignment="center"
+            >
+              <Image
+                (tap)="changeColor3()"
+                [src]="img3 === 1 ? 'res://pos' : 'res://pos2'"
+                stretch="aspectFit"
+                verticalAlignment="center"
+                horizontalAlignment="center"
+                class="loo"
+              ></Image>
+              <Label
+                class="legend"
+                text="Lugares"
+                verticalAlignment="center"
+                horizontalAlignment="center"
+              ></Label>
+            </StackLayout>
+            <StackLayout
+              row="1"
+              col="0"
+              horizontalAlignment="center"
+              verticalAlignment="center"
+            >
+              <Image
+                (tap)="changeColor4()"
+                [src]="img4 === 1 ? 'res://marketplace' : 'res://marketplace2'"
+                stretch="aspectFit"
+                verticalAlignment="center"
+                horizontalAlignment="center"
+                class="loo"
+              ></Image>
+              <Label
+                class="legend"
+                text="Tiendas"
+                verticalAlignment="center"
+                horizontalAlignment="center"
+              ></Label>
+            </StackLayout>
+            <StackLayout
+              row="1"
+              col="1"
+              horizontalAlignment="center"
+              verticalAlignment="center"
+            >
+              <Image
+                (tap)="changeColor5()"
+                [src]="img5 === 1 ? 'res://box' : 'res://box2'"
+                stretch="aspectFit"
+                verticalAlignment="center"
+                horizontalAlignment="center"
+                class="loo"
+              ></Image>
+              <Label
+                class="legend"
+                text="Productos"
+                verticalAlignment="center"
+                horizontalAlignment="center"
+              ></Label>
+            </StackLayout>
+            <StackLayout
+              row="1"
+              col="2"
+              horizontalAlignment="center"
+              verticalAlignment="center"
+            >
+              <Image
+                (tap)="changeColor6()"
+                [src]="img6 === 1 ? 'res://a9' : 'res://a10'"
+                stretch="aspectFit"
+                verticalAlignment="center"
+                horizontalAlignment="center"
+                class="loo"
+              ></Image>
+              <Label
+                class="legend"
+                text="P&R"
+                verticalAlignment="center"
+                horizontalAlignment="center"
+              ></Label>
+            </StackLayout>
+          </GridLayout>
+        </StackLayout>
+        <Button
+          class="boton bt1"
+          [text]="view != 3 ? 'Siguiente': 'Registrarse'"
+          (tap)="changeView()"
+        ></Button>
       </StackLayout>
     </Page>
-    </StackLayout>
-    </ScrollView>
+  </StackLayout>
+</ScrollView>

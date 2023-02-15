@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import { RouterExtensions } from '@nativescript/angular';
 import { Page } from '@nativescript/core';
 
 @Component({
@@ -15,7 +16,8 @@ export class RegisterComponent implements OnInit {
   img4 = 1
   img5 = 1
   img6 = 1
-  constructor(private page:Page) {
+  view = 1
+  constructor(private page:Page, private routerExtension: RouterExtensions) {
     // Use the component constructor to inject providers.
   }
 
@@ -29,44 +31,58 @@ export class RegisterComponent implements OnInit {
 
   changeColor1() {
     if (this.img1 === 1) {
-      this.img1 = 2
+      this.img1 = 2;
     } else {
-      this.img1 = 1
+      this.img1 = 1;
     }
   }
   changeColor2() {
     if (this.img2 === 1) {
-      this.img2 = 2
+      this.img2 = 2;
     } else {
-      this.img2 = 1
+      this.img2 = 1;
     }
   }
   changeColor3() {
     if (this.img3 === 1) {
-      this.img3 = 2
+      this.img3 = 2;
     } else {
-      this.img3 = 1
+      this.img3 = 1;
     }
   }
   changeColor4() {
     if (this.img4 === 1) {
-      this.img4 = 2
+      this.img4 = 2;
     } else {
-      this.img4 = 1
+      this.img4 = 1;
     }
   }
   changeColor5() {
     if (this.img5 === 1) {
-      this.img5 = 2
+      this.img5 = 2;
     } else {
-      this.img5 = 1
+      this.img5 = 1;
     }
   }
   changeColor6() {
     if (this.img6 === 1) {
-      this.img6 = 2
+      this.img6 = 2;
     } else {
-      this.img6 = 2
+      this.img6 = 1;
+    }
+  }
+
+  changeView() {
+    if (this.view <= 2) {
+      this.view = this.view+1
+      this.img1 = 1;
+      this.img2 = 1;
+      this.img3 = 1;
+      this.img4 = 1;
+      this.img5 = 1;
+      this.img6 = 1;
+    } else {
+      this.routerExtension.back();
     }
   }
 }
