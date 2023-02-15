@@ -28,29 +28,6 @@
     background-color: #f4f4f4;
   }
 
-  .post-container {
-    margin-top: 20;
-    padding: 20;
-    background-color: #fff;
-    border-radius: 10;
-  }
-  
-  .profile-image {
-    width: 50;
-    height: 50;
-    border-radius: 25;
-    margin-right: 10;
-  }
-  
-  .username {
-    font-weight: bold;
-    font-size: 16;
-    margin-bottom: 10;
-  }
-  
-  .post-image {
-    width: 100%;
-    height: 200;
-    margin-top: 10;
-    border-radius: 10;
-  }
+.rectangulo{
+    border-top: 100000000000000;
+}
