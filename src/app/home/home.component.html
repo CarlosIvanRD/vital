@@ -6,15 +6,19 @@
 <Image class="logo" src="res://componente" stretch="aspectFit" verticalAlignment="center" horizontalAlignment="center"></Image>
 <Page xmlns="http://schemas.nativescript.org/tns.xsd">
   <StackLayout>
-    <StackLayout orientation="horizontal" class="textfield-container">
-      <Image  class="in" src="res://union" stretch="logo" verticalAlignment="center"  class="loo"></Image>
-      <TextField class="txtlab" hint="Email" keyboardType="email"></TextField>
+    <StackLayout orientation="horizontal" class="textfield-container f-style">
+      
+      <TextField  hint="Email" keyboardType="email">
+        <Image  class="in" src="res://union" stretch="logo" verticalAlignment="center"  class="loo"></Image>
+      </TextField>
     </StackLayout>
-    <StackLayout orientation="horizontal" class="textfield-container">
-      <Image  class="in" src="res://candado" stretch="logo" verticalAlignment="center"  class="loo"></Image>
-      <TextField class="txtlab" hint="Contraseña" secure="true"></TextField>
+    <StackLayout orientation="horizontal" class="textfield-container f-style">
+      
+      <TextField  hint="Contraseña" secure="true">
+        <Image  class="in" src="res://candado" stretch="logo" verticalAlignment="center"  class="loo"></Image>
+      </TextField>
     </StackLayout>
-    <Button class="boton bt1" text="Iniciar sesión" tap="onLoginTap" ></Button>
+    <Button [nsRouterLink]="['/inicio']" class="boton bt1" text="Iniciar sesión" tap="onLoginTap" ></Button>
   </StackLayout>
 </Page>
 <Label text="¿Aún no tienes cuenta?" class="txt" horizontalAlignment="center"></Label>

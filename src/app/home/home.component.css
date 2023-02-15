@@ -19,7 +19,7 @@ This is where the vast majority of your CSS code goes. */
 .bt1{
     color: #FFFFFF;
     background-color: #5C8313;
-    margin-top: 30;
+    margin-top: 20;
 }
 TextField{
     height: 60;
@@ -47,3 +47,32 @@ TextField{
     margin-left: 35;
     margin-top: 25;
 }
+.textfield-container.f-style {
+    margin: 10;
+    background-color: #f4f4f4;
+    border-radius: 20;
+    height: 45;
+    padding: 0;
+    align-items: center;
+    height: 60;
+    width: 80%;
+    margin-bottom: 20;
+  }
+  
+  .textfield-container.f-style TextField {
+    font-size: 16;
+    width: 100%;
+    margin: 0 0;
+    background-color: transparent;
+    color: #000000;
+  }
+  
+  .textfield-container.f-style TextField:focus {
+    outline: none;
+  }
+  
+  .textfield-container.f-style Image {
+    width: 25;
+    height: 25;
+  }
+  
