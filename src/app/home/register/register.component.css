@@ -5,44 +5,56 @@
 This is where the vast majority of your CSS code goes. */
 .logo{
     margin-top: -160;
-    margin-bottom: 10;
+    margin-bottom: 15;
 }
 .boton{
     border-radius: 50;
-    width: 80%;
-    height: 60;
+    width: 65%;
+    height: 40;
     font-weight: bold;
-    font-size: 18;
+    font-size: 16;
     margin-bottom: 30;
-    
+
 }
 .bt1{
     color: #FFFFFF;
     background-color: #5C8313;
-    margin-top: 30;
+    margin-top: 20;
 }
 TextField{
-    height: 40;
+    height: 45;
     color: #707070 ;
-    margin-top: 20;
-    width: 75%;
+    margin-top: 10;
+    width: 65%;
     border-width: 1;
     border-color: #707070;
     border-radius: 50;
     padding: 5;
 }
 .txtlab{
-    font-size: 24;
+    font-size: 20;
     color: #707070;
 }
 .txt{
-    font-size: 24;
+    font-size: 20;
     color: black;
 }
 .registerHere{
     color: #5c8313;
+    margin-top: 20;
+    margin-bottom: 10;
 }
 .loo{
-    margin-left: 35;
-    margin-top: 25;
+    margin: 0 5;
+}
+GridLayout > StackLayout{
+    margin: 0;
+}
+.legend{
+    margin-top: 5;
+    padding-left: 0;
+    margin-bottom: 5;
+}
+.grid{
+    padding: 0 70;
 }

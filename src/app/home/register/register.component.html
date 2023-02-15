@@ -13,30 +13,30 @@
             <TextField class="txtlab" hint="Confirmar contraseña" secure="true"></TextField>
           </StackLayout>
           <Label text="Datos médicos importantes" class="txt registerHere" horizontalAlignment="center"></Label>
-          <GridLayout rows="*,*,*" columns="*,*,*" horizontalAlignment="center">
+          <GridLayout rows="*,*,*" columns="*,*,*" horizontalAlignment="center" class="grid">
             <StackLayout row="0" col="0"  horizontalAlignment="center" verticalAlignment="center">
-              <Image class="in" (tap)="cambiarvar1()" [src]="var1 === 1? 'res://union': 'res://unionoscuro'" stretch="logo" verticalAlignment="center" horizontalAlignment="center" class="loo"></Image>
-              <Label text="texto" verticalAlignment="center" horizontalAlignment="center"></Label>
+              <Image (tap)="changeColor1()" [src]="img1 === 1? 'res://cross': 'res://cross2'" stretch="aspectFit" verticalAlignment="center" horizontalAlignment="center" class="loo"></Image>
+              <Label class="legend" text="Ninguno" verticalAlignment="center" horizontalAlignment="center"></Label>
             </StackLayout>
             <StackLayout row="0" col="1"  horizontalAlignment="center" verticalAlignment="center">
-              <Image class="in" (tap)="cambiarvar1()" [src]="var1 === 1? 'res://union': 'res://unionoscuro'" stretch="logo" verticalAlignment="center" horizontalAlignment="center" class="loo"></Image>
-              <Label text="texto" verticalAlignment="center" horizontalAlignment="center"></Label>
+              <Image (tap)="changeColor2()" [src]="img2 === 1? 'res://milk': 'res://milk2'" stretch="aspectFit" verticalAlignment="center" horizontalAlignment="center" class="loo"></Image>
+              <Label class="legend" text="Diabetes" verticalAlignment="center" horizontalAlignment="center"></Label>
             </StackLayout>
             <StackLayout row="0" col="2"  horizontalAlignment="center" verticalAlignment="center">
-              <Image class="in" (tap)="cambiarvar1()" [src]="var1 === 1? 'res://union': 'res://unionoscuro'" stretch="logo" verticalAlignment="center" horizontalAlignment="center" class="loo"></Image>
-              <Label text="texto" verticalAlignment="center" horizontalAlignment="center"></Label>
+              <Image (tap)="changeColor3()" [src]="img3 === 1? 'res://peanut': 'res://peanut2'" stretch="aspectFit" verticalAlignment="center" horizontalAlignment="center" class="loo"></Image>
+              <Label class="legend" text="Tensión" verticalAlignment="center" horizontalAlignment="center"></Label>
             </StackLayout>
             <StackLayout row="1" col="0"  horizontalAlignment="center" verticalAlignment="center">
-              <Image class="in" (tap)="cambiarvar1()" [src]="var1 === 1? 'res://union': 'res://unionoscuro'" stretch="logo" verticalAlignment="center" horizontalAlignment="center" class="loo"></Image>
-              <Label text="texto" verticalAlignment="center" horizontalAlignment="center"></Label>
+              <Image (tap)="changeColor4()" [src]="img4 === 1? 'res://pos': 'res://pos2'" stretch="aspectFit" verticalAlignment="center" horizontalAlignment="center" class="loo"></Image>
+              <Label class="legend" text="Ácido úrico" verticalAlignment="center" horizontalAlignment="center"></Label>
             </StackLayout>
             <StackLayout row="1" col="1"  horizontalAlignment="center" verticalAlignment="center">
-              <Image class="in" (tap)="cambiarvar1()" [src]="var1 === 1? 'res://union': 'res://unionoscuro'" stretch="logo" verticalAlignment="center" horizontalAlignment="center" class="loo"></Image>
-              <Label text="texto" verticalAlignment="center" horizontalAlignment="center"></Label>
+              <Image (tap)="changeColor5()" [src]="img5 === 1? 'res://eggs': 'res://eggs2'" stretch="aspectFit" verticalAlignment="center" horizontalAlignment="center" class="loo"></Image>
+              <Label class="legend" text="Corazón" verticalAlignment="center" horizontalAlignment="center"></Label>
             </StackLayout>
             <StackLayout row="1" col="2"  horizontalAlignment="center" verticalAlignment="center">
-              <Image class="in" (tap)="cambiarvar1()" [src]="var1 === 1? 'res://union': 'res://unionoscuro'" stretch="logo" verticalAlignment="center" horizontalAlignment="center" class="loo"></Image>
-              <Label text="texto" verticalAlignment="center" horizontalAlignment="center"></Label>
+              <Image (tap)="changeColor6()" [src]="img6 === 1? 'res://potato': 'res://potato2'" stretch="aspectFit" verticalAlignment="center" horizontalAlignment="center" class="loo"></Image>
+              <Label class="legend" text="Otros" verticalAlignment="center" horizontalAlignment="center"></Label>
             </StackLayout>
           </GridLayout>
         <Button class="boton bt1" text="Siguiente" tap="onLoginTap" ></Button>
